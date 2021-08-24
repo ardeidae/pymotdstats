@@ -649,3 +649,7 @@ for i in range(rows_to_print):
         if j < len(columns) - 1:
             row += ' | '
     print(row)
+
+print('\n' + TermColor.blue + TermColor.bold + 'pymotdstats {}'
+      .format(VERSION)
+      .rjust(COL_WIDTH * 3 + 6, '.') + TermColor.reset)
