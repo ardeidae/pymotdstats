@@ -2,6 +2,7 @@
 
 # pymotdstats, a dynamic message of the day written in python
 # Copyright (C) 2021  Matthieu Petiot
+# https://github.com/ardeidae/pymotdstats
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -25,7 +26,7 @@ from enum import Enum, unique
 from subprocess import check_output, CalledProcessError
 
 
-VERSION = '1.0.0'
+VERSION = '1.1.0'
 INI_FILE = '/etc/pymotdstats.ini'
 
 UNKNOWN = 'Unknown'
@@ -648,3 +649,7 @@ for i in range(rows_to_print):
         if j < len(columns) - 1:
             row += ' | '
     print(row)
+
+print('\n' + TermColor.blue + TermColor.bold + 'pymotdstats {}'
+      .format(VERSION)
+      .rjust(COL_WIDTH * 3 + 6, '.') + TermColor.reset)
