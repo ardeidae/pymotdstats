@@ -26,7 +26,7 @@ from enum import Enum, unique
 from subprocess import check_output, CalledProcessError
 
 
-VERSION = '1.0.0'
+VERSION = '1.1.0'
 INI_FILE = '/etc/pymotdstats.ini'
 
 UNKNOWN = 'Unknown'
